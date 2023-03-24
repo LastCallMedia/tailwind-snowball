@@ -6,17 +6,18 @@ TailwindCSS plugin that provides the ability to create components with their own
 
 Install the plugin from npm
 
-```
-# npm
-npm install -D @lastcallmedia/tailwind-snowball
-
+```bash
 # yarn
-yarn add @lastcallmedia/tailwind-snowball --dev
+yarn add @lastcall/tailwind-snowball --dev
+```
+or
+```bash
+# npm
+npm install -D @lastcall/tailwind-snowball
 ```
 
 Then add the plugin to your tailwind.config.js file
-
-```
+```javascript
 // tailwind.config.js
 module.exports = {
   theme: {
@@ -36,7 +37,7 @@ Add a `snowball` section to you tailwind config file. Each top level property na
 
 Each snowball has a `color` property, where individual color palettes are defined. By passing the `theme` function into your `snowball` property, you can easily reference colors that are defined within your config's `color` section.
 
-```
+```javascript
 // tailwind.config.js
 module.exports = {
   theme: {
@@ -72,7 +73,7 @@ module.exports = {
 
 This creates the following color palette component class:
 
-```
+```CSS
 .sb-button-palette-secondary {
   --button--color--surface: #f44;
   --button--color--ink: #fff;
@@ -84,7 +85,7 @@ Additional utility classes are created for each palette property that use the va
 
 Some examples:
 
-```
+```CSS
 .sb-button_bg-surface {
   backgroundColor: var(--button--color--surface)
 }
@@ -100,7 +101,7 @@ You can easily define multiple color palettes for components, and use the utilit
 
 Ex:
 
-```
+```HTML
 <!-- Create a button using the "interface" palette defined above -->
 <button class="sb-button-palette-interface sb-button_bg-surface">
   <span class="sb-button_text-ink hover:sb-button_text-ink-hover">Button Text</span>
@@ -118,7 +119,7 @@ In addition to the `color` property on each snowball, you can also define a `sty
 
 Ex:
 
-```
+```javascript
 // tailwind.config.js
 module.exports = {
   theme: {
@@ -151,7 +152,7 @@ module.exports = {
 
 Produces the following components classes:
 
-```
+```CSS
 .sb-button {
   padding: 1rem;
   border-radius: 0.5rem;
