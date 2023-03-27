@@ -1,0 +1,22 @@
+{
+  "name": "@lastcall/tailwind-snowball",
+  "version": "0.0.1",
+  "description": "TailwindCSS plugin that provides the ability to create components with their own color palettes, and also define component styles within tailwind config files.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LastCallMedia/tailwind-snowball.git"
+  },
+  "keywords": [
+    "TailwindCSS"
+  ],
+  "author": "Jeff Landfried",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LastCallMedia/tailwind-snowball/issues"
+  },
+  "homepage": "https://github.com/LastCallMedia/tailwind-snowball#readme"
+}
