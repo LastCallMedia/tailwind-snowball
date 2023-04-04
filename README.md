@@ -113,6 +113,42 @@ Ex:
 </button>
 ```
 
+## Component Utilities
+
+It's often useful to be able to define other component-specific utility values that can be referenced within a snowball. Things like spacing, font size, border radius, etc. In order to do this, you can simply add a `utilities` property to the current snowball, and then use the same configuration syntax that you normally would when setting values in `theme` or `theme:extend`.
+
+**Note:**
+Not all utilities have been implemented yet. You can see the full list of supported utilities in the `utilities` property of the defined `rulesets`, seen [here](https://github.com/LastCallMedia/tailwind-snowball/blob/main/src/index.js#L23).
+
+Ex:
+```javascript
+// tailwind.config.js
+module.exports = {
+  theme: {
+    snowball: ({ theme }) => ({
+      bio: {
+        color: { /* ... */ },
+        // Start of additional utilities.
+        utility: {
+          borderRadius: {
+            inside: theme("borderRadius.sm"),
+            outside: theme("borderRadius.lg")
+          }
+        }
+      }
+    })
+  }
+}
+```
+
+```HTML
+<!-- Create a bio component utilizing the radiuses defined above -->
+<div class="sb-bio sb-bio_rounded-outside">
+  <img src="https://picsum.photos/200" class="sb-bio_rounded-inside">
+  <div>Joe Smith</div>
+</div>
+```
+
 ### Component Styles
 
 In addition to the `color` property on each snowball, you can also define a `styles` property. Directly beneath the `styles` you can define variants of said style.
@@ -126,9 +162,7 @@ module.exports = {
     snowball: ({ theme }) => ({
       button2: {
         // Start of individual color palettes
-        color: {
-          // ...
-        },
+        color: { /* ... */ },
         styles: {
           // Styles added under the "_" property are applied to all variants
           _: {
