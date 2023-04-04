@@ -113,7 +113,7 @@ Ex:
 </button>
 ```
 
-## Component Utilities
+### Component Utilities
 
 It's often useful to be able to define other component-specific utility values that can be referenced within a snowball. Things like spacing, font size, border radius, etc. In order to do this, you can simply add a `utilities` property to the current snowball, and then use the same configuration syntax that you normally would when setting values in `theme` or `theme:extend`.
 
