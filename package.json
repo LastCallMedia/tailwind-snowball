@@ -1,6 +1,6 @@
 {
   "name": "@lastcall/tailwind-snowball",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "TailwindCSS plugin that provides the ability to create components with their own color palettes, and also define component styles within tailwind config files.",
   "main": "src/index.js",
   "scripts": {
