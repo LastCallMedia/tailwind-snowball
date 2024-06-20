@@ -1,6 +1,6 @@
 # @lastcall/tailwind-snowball
 
-TailwindCSS plugin that provides the ability to create components with their own color palettes, and also define component styles within tailwind config files.
+TailwindCSS plugin is brought to you by your friends at [Last Call Media](https://www.lastcallmedia.com), it provides the ability to create components with their own color palettes, and also define component styles within tailwind config files.
 
 ## Installation
 
